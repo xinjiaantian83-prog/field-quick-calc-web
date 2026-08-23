@@ -4,3 +4,5 @@
 monitor/config.local.json
 monitor/credentials*.json
 monitor/*.sqlite3
+__pycache__/
+*.pyc
