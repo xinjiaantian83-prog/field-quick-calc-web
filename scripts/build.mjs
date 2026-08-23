@@ -221,6 +221,7 @@ function head({ title, description, canonical, page, schemas = [], image = "01-f
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
+  <meta name="google-site-verification" content="B4pG06zbE4sNvjaYWLLyBs-fG_HiSoB6I701sceM79U">
   <link rel="canonical" href="${canonical}">
   <meta name="theme-color" content="#020b08">
   <meta property="og:type" content="website">
