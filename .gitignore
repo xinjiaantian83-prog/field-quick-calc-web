@@ -1,2 +1,6 @@
 .DS_Store
 *.log
+.env
+monitor/config.local.json
+monitor/credentials*.json
+monitor/*.sqlite3

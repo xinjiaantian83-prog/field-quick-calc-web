@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Field Quick Calc Monitor</title><link rel="stylesheet" href="app.css"></head>
+<body><main>
+  <header><div><p class="eyebrow">GENBA TOOLBOX · GA4</p><h1>Field Quick Calc Monitor</h1><p class="sub">Web discovery → SEO page → store click</p></div><div class="range" role="group" aria-label="Date range"><button data-days="1">Today</button><button data-days="7" class="active">7 Days</button><button data-days="30">30 Days</button></div></header>
+  <div id="error" class="error" hidden></div><div id="status" class="status">Loading GA4 data…</div>
+  <section class="metrics" id="metrics"></section>
+  <section class="panel"><div class="panel-head"><div><p class="eyebrow">Landing performance</p><h2>SEO pages</h2></div><span>Store click rate = clicks ÷ users</span></div><div class="table-wrap"><table><thead><tr><th>Page</th><th>Users</th><th>Views</th><th>App Store</th><th>Google Play</th><th>Total</th><th>Rate</th></tr></thead><tbody id="pages"></tbody></table></div></section>
+  <div class="split"><section class="panel"><p class="eyebrow">Acquisition</p><h2>Traffic source</h2><div id="sources" class="bars"></div></section><section class="panel"><p class="eyebrow">Audience</p><h2>Device / OS</h2><div class="table-wrap"><table><thead><tr><th>Type</th><th>Users</th><th>App</th><th>Play</th></tr></thead><tbody id="devices"></tbody></table></div></section></div>
+  <section class="panel goals"><div><p class="eyebrow">Local targets</p><h2>Monthly goals</h2><p>Stored only in this browser.</p></div><label>Monthly users<input id="goal-users" inputmode="numeric" type="number" min="0"></label><label>Monthly store clicks<input id="goal-clicks" inputmode="numeric" type="number" min="0"></label><button id="save-goals">Save</button></section>
+  <footer><span>Property 551037476</span><span id="updated"></span></footer>
+</main><script src="app.js"></script></body></html>

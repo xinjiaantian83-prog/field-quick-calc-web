@@ -207,8 +207,8 @@ function utm(url, page, store) {
 
 function stores(page) {
   return `<div class="store-row">
-    <a class="store-link" data-store="app_store" href="${esc(utm(APP_STORE, page, "ios"))}" target="_blank" rel="noopener noreferrer" aria-label="Download Field Quick Calc on the App Store"><img src="${PUBLIC}/assets/badges/app-store.svg" alt="Download on the App Store" width="180" height="60"></a>
-    <a class="store-link" data-store="google_play" href="${esc(utm(GOOGLE_PLAY, page, "android"))}" target="_blank" rel="noopener noreferrer" aria-label="Get Field Quick Calc on Google Play"><img src="${PUBLIC}/assets/badges/google-play.png" alt="Get it on Google Play" width="194" height="60"></a>
+    <a class="store-link" data-store="app_store" data-cta-location="store_badges" href="${esc(utm(APP_STORE, page, "ios"))}" target="_blank" rel="noopener noreferrer" aria-label="Download Field Quick Calc on the App Store"><img src="${PUBLIC}/assets/badges/app-store.svg" alt="Download on the App Store" width="180" height="60"></a>
+    <a class="store-link" data-store="google_play" data-cta-location="store_badges" href="${esc(utm(GOOGLE_PLAY, page, "android"))}" target="_blank" rel="noopener noreferrer" aria-label="Get Field Quick Calc on Google Play"><img src="${PUBLIC}/assets/badges/google-play.png" alt="Get it on Google Play" width="194" height="60"></a>
   </div>`;
 }
 
@@ -330,6 +330,11 @@ write("index.html", homeHtml());
 for (const page of pages) write(`${page.slug}/index.html`, articleHtml(page));
 write("support/index.html", supportHtml());
 write("privacy/index.html", privacyHtml());
+const privacyPath = path.join(ROOT, "privacy/index.html");
+fs.writeFileSync(privacyPath, fs.readFileSync(privacyPath, "utf8").replace(
+  "The website is prepared to use Google Analytics 4 (GA4) to understand page use and store-link performance. GA4 is not currently enabled because no Field Quick Calc measurement ID has been configured. If enabled later, Google may process information such as page URL, device/browser information, approximate location and interaction events according to Google's terms and privacy policy.",
+  "The website uses Google Analytics 4 (GA4) to understand page use and store-link performance. Google may process information such as page URL, device/browser information, approximate location and interaction events according to Google's terms and privacy policy. We use this information in aggregate to understand which pages are discovered and whether visitors continue to the App Store or Google Play."
+));
 write("404.html", notFoundHtml());
 
 const urls = [`${BASE}/`, ...pages.map((p) => `${BASE}/${p.slug}/`), `${BASE}/support/`, `${BASE}/privacy/`];
