@@ -50,6 +50,7 @@
   });
 
   if (seoLandingPage) emit("seo_page_view", { seo_landing_page: seoLandingPage });
+  if (seoLandingPage) emit("feature_page_view", { feature: seoLandingPage });
 
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
