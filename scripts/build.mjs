@@ -77,20 +77,23 @@ const pages = [
   {
     slug: "slope-calculator",
     label: "Slope calculator",
-    title: "Slope Calculator: Rise, Run, Angle & Length | Field Quick Calc",
-    description: "Calculate slope length, angle and pitch from rise and run for ramps, roofs, driveways and field layout using ft, in, deg and in/ft.",
-    eyebrow: "Roof · ramp · driveway",
-    h1: "Slope calculator for rise, run and angle",
-    lead: "Enter rise and run to estimate slope length, angle and pitch in familiar jobsite units.",
-    intro: "Slope checks start with two perpendicular measurements: vertical rise and horizontal run. Once both are expressed in compatible units, the sloped length and angle follow from a right triangle.",
-    formula: "Slope length = √(run² + rise²) · Angle = atan(rise ÷ run)",
+    title: "Rise and Run Slope Calculator: Angle & Length | Field Quick Calc",
+    description: "Enter rise and horizontal run to calculate slope length, angle in degrees and pitch in inches per foot for ramps, roofs, driveways and construction layout.",
+    eyebrow: "Construction slope · roof · ramp · driveway",
+    h1: "Rise and run slope calculator for construction",
+    lead: "Enter vertical rise and horizontal run to get slope length, angle in degrees and pitch in inches per foot.",
+    intro: "This construction slope calculator turns two field measurements—vertical rise and horizontal run—into the diagonal slope length, angle and rise-per-foot pitch contractors use for layout checks.",
+    formula: "Slope length = √(run² + rise²) · Angle = atan(rise ÷ run) · Pitch = rise (in) ÷ run (ft)",
     sections: [
-      ["What the slope calculator returns", "Field Quick Calc reports slope length in feet, angle in degrees and pitch in inches per foot. That makes one measurement set useful for roof, ramp, driveway and general layout checks."],
-      ["Example: a ramp or driveway check", "For 24 in of rise over 12 ft of run, convert rise and run to compatible units before applying the formula. The app handles that unit relationship and returns the field estimate."],
-      ["How to measure", "Use horizontal run—not the sloped surface length—and measure rise vertically. Mixing the diagonal with run will produce the wrong result."]
+      ["What you get from rise and run", "Enter the vertical rise and horizontal run once. Field Quick Calc returns the diagonal slope length in feet, slope angle in degrees and pitch as inches of rise per foot of run."],
+      ["Construction examples", "Use the same rise-and-run workflow to check a ramp or driveway grade, roof or patio-cover incline, drainage fall, and other contractor layout work. The result is an estimate for field checking, not a substitute for code or design requirements."],
+      ["Example: 24 inches of rise over 12 feet of run", "A 24 in rise over a 12 ft horizontal run equals a 2 in/ft pitch, an angle of about 9.46°, and a slope length of about 12.17 ft. The app handles the unit relationship and shows the results together."],
+      ["How rise, run, slope and angle relate", "Rise is the vertical change. Run is the level horizontal distance. Slope length is the diagonal between them, angle is the incline measured from horizontal, and pitch expresses the rise for each foot of run."],
+      ["Slope calculator vs. pitch calculator", "Use this slope calculator when you need the full set of outputs: slope length, angle and pitch from rise and run. Use the pitch calculator when your main task is converting an incline to inches of rise per foot, such as a 4 in/ft roof pitch."],
+      ["Measure horizontal run", "Measure run level and horizontal—not along the sloped surface—and measure rise vertically. Using the diagonal as run will produce the wrong result."]
     ],
-    faq: [["What is rise and run?", "Rise is the vertical change. Run is the horizontal distance."], ["How is pitch shown?", "Pitch is shown as inches of rise per foot of horizontal run (in/ft)."]],
-    related: ["pitch-calculator", "stair-calculator", "construction-calculator"]
+    faq: [["What does a rise and run slope calculator calculate?", "It uses vertical rise and horizontal run to calculate diagonal slope length, angle in degrees and pitch in inches per foot."], ["What is the difference between slope and pitch?", "Slope is the incline described by rise and run. Pitch expresses that incline as inches of rise per foot of horizontal run."], ["When should I use the pitch calculator instead?", "Use the pitch calculator when rise per foot is the primary result you need. Use this slope calculator when you also need angle and diagonal length."]],
+    related: ["pitch-calculator", "contractor-calculator", "stair-calculator", "construction-calculator"]
   },
   {
     slug: "pitch-calculator",
